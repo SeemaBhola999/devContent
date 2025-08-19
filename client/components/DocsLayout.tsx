@@ -30,12 +30,12 @@ const categories = [
     subcategories: [
       { id: "getting-started", name: "Getting Started" },
       { id: "routing", name: "Routing" },
-      { id: "middleware", name: "Middleware" },
-      { id: "controllers", name: "Controllers" },
-      { id: "models", name: "Models & Eloquent" },
-      { id: "views", name: "Views & Blade" },
-      { id: "authentication", name: "Authentication" },
-      { id: "testing", name: "Testing" }
+      // { id: "middleware", name: "Middleware" },
+      // { id: "controllers", name: "Controllers" },
+      // { id: "models", name: "Models & Eloquent" },
+      // { id: "views", name: "Views & Blade" },
+      // { id: "authentication", name: "Authentication" },
+      // { id: "testing", name: "Testing" }
     ]
   },
   { 
@@ -47,11 +47,11 @@ const categories = [
       { id: "introduction", name: "Introduction" },
       { id: "modules", name: "Modules" },
       { id: "express", name: "Express.js" },
-      { id: "file-system", name: "File System" },
-      { id: "streams", name: "Streams" },
-      { id: "async", name: "Async Programming" },
-      { id: "npm", name: "NPM & Packages" },
-      { id: "deployment", name: "Deployment" }
+      // { id: "file-system", name: "File System" },
+      // { id: "streams", name: "Streams" },
+      // { id: "async", name: "Async Programming" },
+      // { id: "npm", name: "NPM & Packages" },
+      // { id: "deployment", name: "Deployment" }
     ]
   },
   { 
@@ -60,14 +60,14 @@ const categories = [
     icon: Database,
     description: "Database design, optimization, and management",
     subcategories: [
-      { id: "sql-basics", name: "SQL Basics" },
-      { id: "mysql", name: "MySQL" },
-      { id: "postgresql", name: "PostgreSQL" },
-      { id: "mongodb", name: "MongoDB" },
-      { id: "redis", name: "Redis" },
-      { id: "orm", name: "ORMs" },
-      { id: "migrations", name: "Migrations" },
-      { id: "optimization", name: "Optimization" }
+      // { id: "sql-basics", name: "SQL Basics" },
+      // { id: "mysql", name: "MySQL" },
+      // { id: "postgresql", name: "PostgreSQL" },
+      // { id: "mongodb", name: "MongoDB" },
+      // { id: "redis", name: "Redis" },
+      // { id: "orm", name: "ORMs" },
+      // { id: "migrations", name: "Migrations" },
+      // { id: "optimization", name: "Optimization" }
     ]
   },
   { 
@@ -148,7 +148,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
               >
                 Documentation
               </Link>
-              <Link 
+              {/* <Link 
                 to="/courses" 
                 className={cn(
                   "transition-colors hover:text-foreground/80",
@@ -156,7 +156,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                 )}
               >
                 Courses
-              </Link>
+              </Link> */}
             </nav>
           </div>
           <Button

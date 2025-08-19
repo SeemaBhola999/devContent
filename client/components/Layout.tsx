@@ -28,12 +28,12 @@ const categories = [
     topics: [
       { id: "installation", name: "Installation", description: "How to install Laravel framework" },
       { id: "routing", name: "Routing", description: "Learn Laravel routing system" },
-      { id: "controllers", name: "Controllers", description: "Creating and using controllers" },
-      { id: "models", name: "Models & Eloquent", description: "Database models and ORM" },
-      { id: "views", name: "Views & Blade", description: "Templates and views" },
-      { id: "middleware", name: "Middleware", description: "HTTP middleware" },
-      { id: "authentication", name: "Authentication", description: "User authentication" },
-      { id: "testing", name: "Testing", description: "Application testing" },
+      // { id: "controllers", name: "Controllers", description: "Creating and using controllers" },
+      // { id: "models", name: "Models & Eloquent", description: "Database models and ORM" },
+      // { id: "views", name: "Views & Blade", description: "Templates and views" },
+      // { id: "middleware", name: "Middleware", description: "HTTP middleware" },
+      // { id: "authentication", name: "Authentication", description: "User authentication" },
+      // { id: "testing", name: "Testing", description: "Application testing" },
       { id: "encryption", name: "Encryption/Decryption", description: "How to encrypt/decrypt text in Laravel" },
       { id: "queues", name: "Queues", description: "How to use queues in Laravel" },
       { id: "cron-jobs", name: "Cron Jobs", description: "How to use cron jobs in Laravel" }
@@ -46,12 +46,12 @@ const categories = [
     topics: [
       { id: "introduction", name: "Introduction", description: "Getting started with Node.js" },
       { id: "modules", name: "Modules", description: "CommonJS and ES modules" },
-      { id: "express", name: "Express.js", description: "Web framework for Node.js" },
-      { id: "file-system", name: "File System", description: "Working with files" },
-      { id: "streams", name: "Streams", description: "Node.js streams" },
-      { id: "async", name: "Async Programming", description: "Promises and async/await" },
-      { id: "npm", name: "NPM & Packages", description: "Package management" },
-      { id: "deployment", name: "Deployment", description: "Deploying Node.js apps" }
+      // { id: "express", name: "Express.js", description: "Web framework for Node.js" },
+      // { id: "file-system", name: "File System", description: "Working with files" },
+      // { id: "streams", name: "Streams", description: "Node.js streams" },
+      // { id: "async", name: "Async Programming", description: "Promises and async/await" },
+      // { id: "npm", name: "NPM & Packages", description: "Package management" },
+      // { id: "deployment", name: "Deployment", description: "Deploying Node.js apps" }
     ]
   },
   {
@@ -59,9 +59,9 @@ const categories = [
     name: "Database",
     icon: Database,
     topics: [
-      { id: "sql-basics", name: "SQL Basics", description: "Fundamental SQL concepts" },
-      { id: "mysql", name: "MySQL", description: "MySQL database" },
-      { id: "orm", name: "ORMs", description: "Object-Relational Mapping" },
+      // { id: "sql-basics", name: "SQL Basics", description: "Fundamental SQL concepts" },
+      // { id: "mysql", name: "MySQL", description: "MySQL database" },
+      // { id: "orm", name: "ORMs", description: "Object-Relational Mapping" },
       { id: "cart-tables", name: "Cart & Cart Details Tables", description: "E-commerce cart table design" },
       { id: "order-tables", name: "Order & Order Details Tables", description: "E-commerce order table design" }
     ]
@@ -73,12 +73,12 @@ const categories = [
     topics: [
       { id: "stripe", name: "Stripe Integration", description: "Stripe payment processing" },
       { id: "paypal", name: "PayPal Integration", description: "PayPal payment system" },
-      { id: "razorpay", name: "Razorpay", description: "Razorpay integration" },
-      { id: "security", name: "Payment Security", description: "Secure payment handling" },
-      { id: "webhooks", name: "Webhooks", description: "Payment webhooks" },
-      { id: "testing", name: "Testing Payments", description: "Testing payment flows" },
-      { id: "compliance", name: "PCI Compliance", description: "Payment compliance" },
-      { id: "refunds", name: "Refunds & Disputes", description: "Handling refunds" }
+      // { id: "razorpay", name: "Razorpay", description: "Razorpay integration" },
+      // { id: "security", name: "Payment Security", description: "Secure payment handling" },
+      // { id: "webhooks", name: "Webhooks", description: "Payment webhooks" },
+      // { id: "testing", name: "Testing Payments", description: "Testing payment flows" },
+      // { id: "compliance", name: "PCI Compliance", description: "Payment compliance" },
+      // { id: "refunds", name: "Refunds & Disputes", description: "Handling refunds" }
     ]
   },
   { 
@@ -88,12 +88,12 @@ const categories = [
     topics: [
       { id: "rest", name: "REST APIs", description: "RESTful API development" },
       { id: "graphql", name: "GraphQL", description: "GraphQL API development" },
-      { id: "authentication", name: "API Authentication", description: "Securing APIs" },
-      { id: "documentation", name: "API Documentation", description: "Documenting APIs" },
-      { id: "testing", name: "API Testing", description: "Testing APIs" },
-      { id: "versioning", name: "API Versioning", description: "Managing API versions" },
-      { id: "rate-limiting", name: "Rate Limiting", description: "API rate limiting" },
-      { id: "webhooks", name: "Webhooks", description: "API webhooks" }
+      // { id: "authentication", name: "API Authentication", description: "Securing APIs" },
+      // { id: "documentation", name: "API Documentation", description: "Documenting APIs" },
+      // { id: "testing", name: "API Testing", description: "Testing APIs" },
+      // { id: "versioning", name: "API Versioning", description: "Managing API versions" },
+      // { id: "rate-limiting", name: "Rate Limiting", description: "API rate limiting" },
+      // { id: "webhooks", name: "Webhooks", description: "API webhooks" }
     ]
   },
   { 
@@ -103,12 +103,12 @@ const categories = [
     topics: [
       { id: "openai", name: "OpenAI Integration", description: "Using OpenAI APIs" },
       { id: "machine-learning", name: "Machine Learning", description: "ML fundamentals" },
-      { id: "nlp", name: "Natural Language Processing", description: "NLP techniques" },
-      { id: "computer-vision", name: "Computer Vision", description: "Image processing" },
-      { id: "chatbots", name: "Chatbots", description: "Building chatbots" },
-      { id: "recommendation", name: "Recommendation Systems", description: "Recommendation engines" },
-      { id: "ethics", name: "AI Ethics", description: "Responsible AI development" },
-      { id: "deployment", name: "AI Model Deployment", description: "Deploying AI models" }
+      // { id: "nlp", name: "Natural Language Processing", description: "NLP techniques" },
+      // { id: "computer-vision", name: "Computer Vision", description: "Image processing" },
+      // { id: "chatbots", name: "Chatbots", description: "Building chatbots" },
+      // { id: "recommendation", name: "Recommendation Systems", description: "Recommendation engines" },
+      // { id: "ethics", name: "AI Ethics", description: "Responsible AI development" },
+      // { id: "deployment", name: "AI Model Deployment", description: "Deploying AI models" }
     ]
   }
 ];
@@ -314,7 +314,7 @@ class User extends Model
     queues: {
       title: "Laravel Queues",
       content: `
-# Laravel Queues
+# 
 
 Laravel queues provide a unified queueing API across a variety of different queue backends, such as Amazon SQS, Redis, or even a relational database.
 
@@ -3176,7 +3176,7 @@ export default function Layout({ children }: LayoutProps) {
               >
                 Home
               </Link>
-              <Link 
+              {/* <Link 
                 to="/courses" 
                 className={cn(
                   "transition-colors hover:text-foreground/80",
@@ -3184,7 +3184,7 @@ export default function Layout({ children }: LayoutProps) {
                 )}
               >
                 Courses
-              </Link>
+              </Link> */}
             </nav>
           </div>
           <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
