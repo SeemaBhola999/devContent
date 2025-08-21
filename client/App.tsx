@@ -22,7 +22,7 @@ const queryClient = new QueryClient();
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="system" storageKey="devlearn-ui-theme">
+      <ThemeProvider defaultTheme="system" storageKey="devContent-ui-theme">
         <TooltipProvider>
           <Toaster />
           <Sonner />
