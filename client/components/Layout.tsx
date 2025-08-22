@@ -2,6 +2,7 @@ import { ReactNode, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
+import React, { useEffect } from 'react';
 import { Input } from "@/components/ui/input";
 import {
   BookOpen,
@@ -3111,6 +3112,14 @@ plt.show()
 };
 
 export default function Layout({ children }: LayoutProps) {
+
+
+  useEffect(() => {
+    interface Window {
+      adsbygoogle: any[] | undefined;
+    }
+  }, []);
+
   const location = useLocation();
   const [expandedCategory, setExpandedCategory] = useState<string | null>("laravel");
   const [selectedTopic, setSelectedTopic] = useState<{ category: string, topic: string } | null>({ category: "laravel", topic: "installation" });
