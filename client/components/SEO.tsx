@@ -14,7 +14,7 @@ export default function SEO({
   description = "Learn programming and development skills with expert-led courses, tutorials, and hands-on projects. Master Laravel, Node.js, Database, Payment Gateway, APIs, and AI development.",
   keywords = "programming, development, coding, laravel, nodejs, database, payment gateway, apis, ai, web development, backend, frontend, tutorials, courses, online learning",
   image = "/og-image.jpg",
-  url = "https://devcontent.com",
+  url = "https://developcontent.netlify.app",
   type = "website"
 }: SEOProps) {
   const siteTitle = title.includes('devContent') ? title : `${title} | devContent`;
@@ -46,11 +46,11 @@ export default function SEO({
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@devcontent" />
       <meta name="twitter:creator" content="@devcontent" />
-      
+
       {/* Additional SEO */}
       <meta name="theme-color" content="#2563eb" />
       <link rel="canonical" href={url} />
-      
+
       {/* Schema.org structured data */}
       <script type="application/ld+json">
         {JSON.stringify({

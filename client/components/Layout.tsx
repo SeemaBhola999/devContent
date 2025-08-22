@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import { Input } from "@/components/ui/input";
-import { 
-  BookOpen, 
+import {
+  BookOpen,
   Search,
   Server,
   Database,
@@ -39,9 +39,9 @@ const categories = [
       { id: "cron-jobs", name: "Cron Jobs", description: "How to use cron jobs in Laravel" }
     ]
   },
-  { 
-    id: "nodejs", 
-    name: "Node.js", 
+  {
+    id: "nodejs",
+    name: "Node.js",
     icon: Server,
     topics: [
       { id: "introduction", name: "Introduction", description: "Getting started with Node.js" },
@@ -66,9 +66,9 @@ const categories = [
       { id: "order-tables", name: "Order & Order Details Tables", description: "E-commerce order table design" }
     ]
   },
-  { 
-    id: "payment-gateway", 
-    name: "Payment Gateway", 
+  {
+    id: "payment-gateway",
+    name: "Payment Gateway",
     icon: CreditCard,
     topics: [
       { id: "stripe", name: "Stripe Integration", description: "Stripe payment processing" },
@@ -81,9 +81,9 @@ const categories = [
       // { id: "refunds", name: "Refunds & Disputes", description: "Handling refunds" }
     ]
   },
-  { 
-    id: "apis", 
-    name: "APIs", 
+  {
+    id: "apis",
+    name: "APIs",
     icon: Zap,
     topics: [
       { id: "rest", name: "REST APIs", description: "RESTful API development" },
@@ -96,9 +96,9 @@ const categories = [
       // { id: "webhooks", name: "Webhooks", description: "API webhooks" }
     ]
   },
-  { 
-    id: "ai", 
-    name: "AI", 
+  {
+    id: "ai",
+    name: "AI",
     icon: Brain,
     topics: [
       { id: "openai", name: "OpenAI Integration", description: "Using OpenAI APIs" },
@@ -3113,7 +3113,7 @@ plt.show()
 export default function Layout({ children }: LayoutProps) {
   const location = useLocation();
   const [expandedCategory, setExpandedCategory] = useState<string | null>("laravel");
-  const [selectedTopic, setSelectedTopic] = useState<{category: string, topic: string} | null>({ category: "laravel", topic: "installation" });
+  const [selectedTopic, setSelectedTopic] = useState<{ category: string, topic: string } | null>({ category: "laravel", topic: "installation" });
 
   const handleCategoryClick = (categoryId: string) => {
     if (expandedCategory === categoryId) {
@@ -3135,10 +3135,22 @@ export default function Layout({ children }: LayoutProps) {
       if (content) {
         return (
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl font-bold mb-8">{content.title}</h1>
+
+            <div style={{ position: 'absolute', top: '16px', right: '16px', zIndex: 10 }}>
+              <ins
+                className="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-1686839516958653"
+                data-ad-slot="2199453545"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
+            </div>
+
+            <h1 className="text-3xl font-bold mb-8"></h1>
             <div className="prose prose-slate dark:prose-invert max-w-none">
-              <div 
-                dangerouslySetInnerHTML={{ 
+              <div
+                dangerouslySetInnerHTML={{
                   __html: content.content
                     .replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre class="bg-muted p-4 rounded-md overflow-x-auto border"><code class="language-$1">$2</code></pre>')
                     .replace(/`([^`]+)`/g, '<code class="bg-muted px-1 py-0.5 rounded text-sm">$1</code>')
@@ -3146,7 +3158,7 @@ export default function Layout({ children }: LayoutProps) {
                     .replace(/^## (.*$)/gim, '<h2 class="text-2xl font-semibold mb-3 mt-6">$1</h2>')
                     .replace(/^### (.*$)/gim, '<h3 class="text-xl font-semibold mb-2 mt-4">$1</h3>')
                     .replace(/^\n/gm, '<br>')
-                }} 
+                }}
               />
             </div>
           </div>
@@ -3167,8 +3179,8 @@ export default function Layout({ children }: LayoutProps) {
               <span className="hidden font-bold sm:inline-block">devContent</span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className={cn(
                   "transition-colors hover:text-foreground/80",
                   location.pathname === "/" ? "text-foreground" : "text-foreground/60"
@@ -3226,7 +3238,7 @@ export default function Layout({ children }: LayoutProps) {
                       </div>
                       {isExpanded ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
                     </button>
-                    
+
                     {isExpanded && (
                       <div className="ml-8 mt-2 space-y-1">
                         {category.topics.map((topic) => (

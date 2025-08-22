@@ -95,119 +95,119 @@ export default function Courses() {
         title="Programming Courses - Learn Web Development Online | devContent"
         description="Discover comprehensive programming courses covering Laravel, Node.js, Database management, Payment Gateway integration, APIs, and AI development. Start your coding journey today."
         keywords="programming courses, web development courses, laravel course, nodejs course, database course, coding bootcamp, online programming classes, developer training"
-        url="https://devcontent.com/courses"
+        url="https://developcontent.netlify.app/courses"
       />
       <Layout>
         <div className="max-w-7xl mx-auto space-y-8">
-        {/* Header */}
-        <div className="text-center py-8">
-          <h1 className="text-4xl font-bold text-slate-800 mb-4">All Courses</h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Discover our comprehensive collection of development courses designed to take your skills to the next level.
-          </p>
-        </div>
+          {/* Header */}
+          <div className="text-center py-8">
+            <h1 className="text-4xl font-bold text-slate-800 mb-4">All Courses</h1>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Discover our comprehensive collection of development courses designed to take your skills to the next level.
+            </p>
+          </div>
 
-        {/* Filters */}
-        <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-slate-200/60">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 h-4 w-4" />
-              <Input 
-                placeholder="Search courses..." 
-                className="pl-10 bg-white/80"
-              />
+          {/* Filters */}
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-slate-200/60">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1 relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 h-4 w-4" />
+                <Input
+                  placeholder="Search courses..."
+                  className="pl-10 bg-white/80"
+                />
+              </div>
+              <Select>
+                <SelectTrigger className="w-full md:w-[180px] bg-white/80">
+                  <SelectValue placeholder="Category" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Categories</SelectItem>
+                  <SelectItem value="frontend">Frontend</SelectItem>
+                  <SelectItem value="backend">Backend</SelectItem>
+                  <SelectItem value="mobile">Mobile</SelectItem>
+                  <SelectItem value="devops">DevOps</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select>
+                <SelectTrigger className="w-full md:w-[180px] bg-white/80">
+                  <SelectValue placeholder="Level" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Levels</SelectItem>
+                  <SelectItem value="beginner">Beginner</SelectItem>
+                  <SelectItem value="intermediate">Intermediate</SelectItem>
+                  <SelectItem value="advanced">Advanced</SelectItem>
+                </SelectContent>
+              </Select>
+              <Button variant="outline" className="bg-white/80">
+                <Filter className="h-4 w-4 mr-2" />
+                Filter
+              </Button>
             </div>
-            <Select>
-              <SelectTrigger className="w-full md:w-[180px] bg-white/80">
-                <SelectValue placeholder="Category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
-                <SelectItem value="frontend">Frontend</SelectItem>
-                <SelectItem value="backend">Backend</SelectItem>
-                <SelectItem value="mobile">Mobile</SelectItem>
-                <SelectItem value="devops">DevOps</SelectItem>
-              </SelectContent>
-            </Select>
-            <Select>
-              <SelectTrigger className="w-full md:w-[180px] bg-white/80">
-                <SelectValue placeholder="Level" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Levels</SelectItem>
-                <SelectItem value="beginner">Beginner</SelectItem>
-                <SelectItem value="intermediate">Intermediate</SelectItem>
-                <SelectItem value="advanced">Advanced</SelectItem>
-              </SelectContent>
-            </Select>
-            <Button variant="outline" className="bg-white/80">
-              <Filter className="h-4 w-4 mr-2" />
-              Filter
+          </div>
+
+          {/* Course Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {allCourses.map((course) => (
+              <Card key={course.id} className="overflow-hidden border-slate-200/60 bg-white/60 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="aspect-video bg-gradient-to-br from-blue-400 via-purple-500 to-indigo-600 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-black/20" />
+                  <Badge className="absolute top-3 left-3 bg-white/90 text-slate-800 hover:bg-white">
+                    {course.category}
+                  </Badge>
+                  <div className="absolute top-3 right-3 text-white font-semibold text-sm bg-black/30 px-2 py-1 rounded">
+                    {course.price}
+                  </div>
+                  <div className="absolute bottom-3 left-3 text-white text-sm bg-black/30 px-2 py-1 rounded">
+                    {course.lessons} lessons
+                  </div>
+                </div>
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-2">
+                    <Badge variant="secondary" className="text-xs">
+                      {course.level}
+                    </Badge>
+                    <div className="flex items-center text-sm text-slate-600">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                      {course.rating}
+                    </div>
+                  </div>
+                  <CardTitle className="text-lg leading-tight hover:text-blue-600 transition-colors">
+                    {course.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm leading-relaxed">
+                    {course.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between text-sm text-slate-600 mb-4">
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {course.duration}
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-1" />
+                      {course.students.toLocaleString()}
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-slate-600">by {course.instructor}</span>
+                    <Button size="sm" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+                      Enroll Now
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Load More */}
+          <div className="text-center py-8">
+            <Button variant="outline" size="lg" className="bg-white/80">
+              Load More Courses
             </Button>
           </div>
-        </div>
-
-        {/* Course Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {allCourses.map((course) => (
-            <Card key={course.id} className="overflow-hidden border-slate-200/60 bg-white/60 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="aspect-video bg-gradient-to-br from-blue-400 via-purple-500 to-indigo-600 relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20" />
-                <Badge className="absolute top-3 left-3 bg-white/90 text-slate-800 hover:bg-white">
-                  {course.category}
-                </Badge>
-                <div className="absolute top-3 right-3 text-white font-semibold text-sm bg-black/30 px-2 py-1 rounded">
-                  {course.price}
-                </div>
-                <div className="absolute bottom-3 left-3 text-white text-sm bg-black/30 px-2 py-1 rounded">
-                  {course.lessons} lessons
-                </div>
-              </div>
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge variant="secondary" className="text-xs">
-                    {course.level}
-                  </Badge>
-                  <div className="flex items-center text-sm text-slate-600">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
-                    {course.rating}
-                  </div>
-                </div>
-                <CardTitle className="text-lg leading-tight hover:text-blue-600 transition-colors">
-                  {course.title}
-                </CardTitle>
-                <CardDescription className="text-sm leading-relaxed">
-                  {course.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-between text-sm text-slate-600 mb-4">
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {course.duration}
-                  </div>
-                  <div className="flex items-center">
-                    <Users className="w-4 h-4 mr-1" />
-                    {course.students.toLocaleString()}
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-slate-600">by {course.instructor}</span>
-                  <Button size="sm" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-                    Enroll Now
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Load More */}
-        <div className="text-center py-8">
-          <Button variant="outline" size="lg" className="bg-white/80">
-            Load More Courses
-          </Button>
-        </div>
         </div>
       </Layout>
     </>

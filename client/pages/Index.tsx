@@ -29,7 +29,7 @@ export default function Index() {
         title="devContent - Advanced Development Skills | Laravel, Node.js, Databases, APIs, AI"
         description="Master advanced programming skills with real-world tutorials. Learn Laravel, Node.js, Database design, Payment Gateway integration, APIs, and AI development with practical market content."
         keywords="advanced programming, laravel tutorial, nodejs backend, database design, payment gateway integration, api development, ai coding, software architecture"
-        url="https://devcontent.com"
+        url="https://developcontent.netlify.app"
       />
       <Layout>
         <div className="max-w-7xl mx-auto space-y-16">
